@@ -1,0 +1,1 @@
+./cmd2 "read input; eval '\$input'"
